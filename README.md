@@ -10,12 +10,14 @@
 # Installation
 
 ```
-# Install dependencies.
+# Global dependencies.
 $ npm install -g typings webpack
-$ npm install
-$ typings install
 
-# Build server.
+# Local dependencies.
+$ typings install
+$ npm install
+
+# Build website.
 $ webpack
 
 # Start server.
@@ -30,10 +32,10 @@ $ node index.js
 mean/
  │
  ├──client/              * frontend logic
- │   ├──app/             * contains Angular components & modules
- │   ├──sass/            * contains SASS templates
+ │   ├──app/             * Angular components & modules
+ │   ├──sass/            * SASS templates
  │   │
- │   ├──index.html       * basic HTML template
+ │   ├──index.html       * basic HTML layout
  │   ├──main.js          * bootstrap the app
  │   ├──polyfills.js     * polyfills for the app
  │   └──vendors.js       * 3rd party libs for the app
@@ -50,5 +52,5 @@ mean/
  │   ├──index.js         * configure Express and start Node.js
  │   └──routes.js        * import Express routes
  │
- ├──index.js             * use Babel to transpile the server
+ └──index.js             * use Babel to transpile the server
 ```

@@ -6,10 +6,11 @@ import routes from './routes';
 // Init app.
 let app = express();
 let server = http.createServer(app);
+let publicFiles = express.static(__dirname + '/../public');
 
 // Setup router.
 let router = express.Router();
-routes(app, router);
+routes(app, router, publicFiles);
 
 // Run app.
 server.listen(3000);

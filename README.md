@@ -11,7 +11,12 @@
 
 ```
 # Install dependencies.
+$ npm install -g typings webpack
 $ npm install
+$ typings install
+
+# Build server.
+$ webpack
 
 # Start server.
 $ node index.js
@@ -24,15 +29,25 @@ $ node index.js
 ```
 mean/
  │
+ ├──client/              * frontend logic
+ │   ├──app/             * Angular app built here
+ │   │
+ │   ├──index.html       * basic HTML template
+ │   ├──main.js          * bootstrap the app
+ │   ├──polyfills.js     * polyfills for the app
+ │   └──vendors.js       * 3rd party libs for the app
+ │
+ ├──public/              * static assets
+ │   ├──dist/            * webpack's output
+ │   │
+ │   └──robots.txt       * for the robots
+ │
  ├──server/              * backend logic
  │   ├──models/          * DB model definitions
  │   ├──routes/          * API route definitions
  │   │
  │   ├──index.js         * configure Express and start Node.js
  │   └──routes.js        * import Express routes
- │
- ├──.babelrc             * configure Babel
- ├──package.json         * npm dependencies
  │
  ├──index.js             * use Babel to transpile the server
 ```

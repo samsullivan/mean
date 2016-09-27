@@ -9,7 +9,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.ts', '.js', '.json'],
-    modulesDirectories: ['node_modules']
+    modulesDirectories: ['./node_modules']
   },
   module: {
     loaders: [
@@ -22,6 +22,11 @@ module.exports = {
         test: /\.html$/,
         loader: 'raw-loader',
         exclude: ['./client/index.html']
+      },
+      {
+        test: /\.scss$/,
+        loader: 'raw-loader!sass',
+        exclude: ['./node_modules']
       }
     ]
   },

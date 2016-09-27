@@ -30,7 +30,8 @@ $ node index.js
 mean/
  │
  ├──client/              * frontend logic
- │   ├──app/             * Angular app built here
+ │   ├──app/             * contains Angular components & modules
+ │   ├──sass/            * contains SASS templates
  │   │
  │   ├──index.html       * basic HTML template
  │   ├──main.js          * bootstrap the app
